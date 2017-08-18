@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Searcy Animal Shelter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <meta name="description" content="Searcy Animal Shelter for cats and dogs">
+  <meta name="keywords" content="HTML,CSS,JavaScript,cats,dogs,animals,adoption,shelter,pets">
+  <meta name="author" content="Madison Haskins and Zach Dailey">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" style ="font-family: searcyanimalshelter; font-size: 24pt;" id="Home">Searcy Animal Shelter</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+    <li><a id="main">HOME</a></li>
+        <li><a id="AboutUs">ABOUT US</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADOPT<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a id="CatAdoptionPage">CATS</a></li>
+          <li><a id="DogAdoptionPage">DOGS</a></li>
+          <li><a id="AdoptionApplication">ADOPTION APPLICATION</a></li>
+        </ul>
+      </li>
+    <li><a id="Donate">DONATE</a></li>
+        <li><a id="ContactUs">CONTACT US</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid col-sm-8">
+  <h2 style="text-align: center;">Adoption Application</h2><hr>
+  <p style="text-align: center;">Enter your name, email, and pet you would like to adopt, then download the application form from 
+	<a href="SearcyAnimalShelterAdoptionApp.pdf">here</a>. After you have completed the application please submit it using the upload button. We will review your application and get back to you as soon as we can. Thank you for adopting from 
+	Searcy Animal Shelter, and for giving a pet a foever home!
+	</p> <br>
+	<p style="text-align:center;"><a href="SearcyAnimalShelterAdoptionApp.pdf">Click here to download the Adoption Application.</a></p>
+	
+  <form  role="form">
+    <div class="form-group">
+    <label for="name">Name:</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter name" required>
+	  
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+	  
+	   <label for="email">Pet to adopt:</label>
+      <input type="adopt" class="form-control" id="adopt" placeholder="Please enter name" required>
+    </div>
+	
+    <input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+    <div class="fileUpload btn btn-primary">
+        <span>Upload</span>
+        <input id="uploadBtn" type="file" class="upload" />
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container-fluid col-sm-4" align= "middle">
+  <h2 align="middle">CONTACT US</h2> <hr>
+		  <h3>Hours of Operation</h3>           
+			  <table class="table table-bordered">
+				<tbody>
+				 <tr>
+					<td>Sunday</td>
+					<td>Closed</td>
+				  </tr>
+				  <tr>
+					<td>Monday</td>
+					<td>10:00-5:00</td>
+				  </tr>
+				  <tr>
+					<td>Tuesday</td>
+					<td>10:00-5:00</td>
+				  </tr>
+				  <tr>
+					<td>Wednesday</td>
+					<td>10:00-5:00</td>
+				  </tr>
+				    <tr>
+					<td>Thursday</td>
+					<td>10:00-5:00</td>
+				  </tr>
+				    <tr>
+					<td>Friday</td>
+					<td>10:00-5:00</td>
+				  </tr>
+				    <tr>
+					<td>Saturday</td>
+					<td>9:00-12:00</td>
+				  </tr>
+				</tbody>
+			  </table>
+	
+		<p><span class="glyphicon glyphicon-map-marker"></span> Searcy, AR</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 501-268-3535 </p>
+      <p><span class="glyphicon glyphicon-envelope"></span> animalshelter@searcyAS.com</p> 
+	  <img src="MainImages/logo2.png" alt="Logo2" align= "middle" style="width:120px;height:120px;">
+      
+	</div>
+	 
+</div>
+
+</body>
+</html>
+
+<script>
+  document.getElementById("uploadBtn").onchange = function () {
+  document.getElementById("uploadFile").value = this.value;
+};
+
+document.getElementById("Home").onclick = function () {
+    location.href = "main.html";
+};
+
+document.getElementById("main").onclick = function () {
+    location.href = "main.html";
+};
+
+document.getElementById("AboutUs").onclick = function () {
+    location.href = "AboutUs.html";
+};
+
+document.getElementById("CatAdoptionPage").onclick = function () {
+    location.href = "CatAdoptionPage.html";
+};
+
+document.getElementById("DogAdoptionPage").onclick = function () {
+    location.href = "DogAdoptionPage.html";
+};
+
+document.getElementById("AdoptionApplication").onclick = function () {
+    location.href = "AdoptionApplication.html";
+};
+
+document.getElementById("Donate").onclick = function () {
+    location.href = "Donate.html";
+};
+
+document.getElementById("ContactUs").onclick = function () {
+    location.href = "ContactUs.html";
+};
+
+</script>
+
+
+
